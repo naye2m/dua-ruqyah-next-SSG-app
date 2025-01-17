@@ -103,8 +103,6 @@ Test Live: [https://dua-ruqyah.moontreee.com/api/sitemap.xml](https://dua-ruqyah
 * **Purpose**: Helps with search engine optimization by providing an XML sitemap of all routes.
 * **Notes**: Typically consumed by search engines like Google for indexing.
 
-* * *
-
 #### **6.** `GET /api/subcategory/[cat_id]/[lang].js`
 Test Live: [ Api: https://dua-ruqyah.moontreee.com/api/subcategory/1/en](https://dua-ruqyah.moontreee.com/api/subcategory/1/en)
 
