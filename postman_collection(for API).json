@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "c40c393e-cb9a-4c38-867e-5cc720b56395",
+		"name": "Next.js Dua App API",
+		"description": "Postman collection for Next.js API routes with examples for valid and invalid parameters",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31287902"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "Category API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "dua-ruqyah.moontreee.com/api/category/{{lang}}",
+						"description": "This is a GET request to fetch category data by language.\nValid lang values: 'bn' or 'en'. Example invalid: 'invalid'."
+					},
+					"response": [
+						{
+							"name": "en (valid)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/category/en"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "bn (valid)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/category/bn"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "invalid (default en)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/category/invalid"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\"error\":\"Invalid language parameter\"}"
+						}
+					]
+				},
+				{
+					"name": "Duas API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://dua-ruqyah.moontreee.com/api/duas/{{cat_id}}/{{lang}}",
+						"description": "This is a GET request to fetch duas data by category id and language.\nValid cat_id values: 1-5. Example invalid: '99'. Valid lang values: 'bn' or 'en'. Example invalid: 'invalid'."
+					},
+					"response": [
+						{
+							"name": "1/en (valid)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/duas/1/en"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "1/bn (valid)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/duas/1/bn"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "99/en (invalid cat_id)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/duas/99/en"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\"error\":\"Invalid category ID\"}"
+						},
+						{
+							"name": "1/invalid (invalid lang. df:en)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/duas/1/invalid"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\"error\":\"Invalid language parameter\"}"
+						}
+					]
+				},
+				{
+					"name": "Hello API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://dua-ruqyah.moontreee.com/api/hello",
+						"description": "A simple GET request to the hello API."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/hello"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\"message\":\"Hello!\"}"
+						}
+					]
+				},
+				{
+					"name": "Subcategory API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://dua-ruqyah.moontreee.com/api/subcategory/{{cat_id}}/{{lang}}",
+						"description": "This is a GET request to fetch subcategory data by category id and language.\nValid cat_id values: 1-5. Example invalid: '99'. Valid lang values: 'bn' or 'en'. Example invalid: 'invalid'."
+					},
+					"response": [
+						{
+							"name": "1/en (valid)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/subcategory/1/en"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "1/bn (valid)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/subcategory/1/bn"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "99/bn (invalid cat_id)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/subcategory/99/bn"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\"error\":\"Invalid category ID\"}"
+						},
+						{
+							"name": "1/invalid (invalid lang: default en)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/subcategory/1/invalid"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\"error\":\"Invalid language parameter\"}"
+						}
+					]
+				},
+				{
+					"name": "Sitemap XML API (SEO)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://dua-ruqyah.moontreee.com/api/sitemap.xml",
+						"description": "A simple GET request to the sitemap XML API."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://dua-ruqyah.moontreee.com/api/sitemap.xml"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [],
+							"cookie": [],
+							"body": "<xml></xml>"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "lang",
+			"value": "en"
+		},
+		{
+			"key": "cat_id",
+			"value": "1"
+		}
+	]
+}

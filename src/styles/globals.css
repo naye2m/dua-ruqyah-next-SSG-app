@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('extra/a1.css');
+@import url('extra/b2.css');
+@import url('extra/c1.css');
+
+
+@font-face {
+  font-family: me_quran;
+  src: url(/assets/fonts/me_quran.ttf) format("truetype");
+}
+
+:text-dark-text {
+  @apply text-[#fff];
+}
+
+
+
+body {
+  @apply bg-[#ebeef2] dark:bg-[#122337] dark:text-[#eee] relative selection:bg-primary25 selection:text-primary-dark selection:rounded-sm dark:selection:text-primary-light dark:selection:bg-primary25;
+
+
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary25 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* @apply bg-primary rounded-full; */
+    @apply border-2 border-primary-light;
+    @apply transition-colors duration-300 ease-in-out;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-dark;
+    transform: scale(1.1);
+  }
+
+  ::-webkit-scrollbar-thumb:focus {
+    @apply outline-2 outline-primary-dark outline-offset-2;
+  }
+
+
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  rotate: 90deg;
+}
+
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+  @apply  from-primary to-primary25 ;
+  border-radius: 5px;
+  width: 6px;
+  margin: 0 2px;
+  animation: hue-rotate-animation 3s ease-in-out infinite;
+}
+
+
+::-webkit-scrollbar-track {
+  @apply bg-primary25 opacity-50;
+}
+
+
+.font-inter.style-en>div {
+  @apply gap-6;
+}
